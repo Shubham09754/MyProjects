@@ -6,18 +6,19 @@ from .forms import Form
 def home(request):
     return render(request,'core/home.html')
 
-#def contact(request):
- #   return render(request,'core/contact.html')
+def contact(request):
+    return render(request,'core/contact.html')
 
 
-def contact(request, id):
-    if request.method == 'POST':
-        pi = User.objects.get(pk=id)
-        fm = Form(request.POST, instance=pi)
-        if fm.is_valid():
-            fm.save()
-    else:
-        pi = User.objects.get(pk=id)
-        fm = Form(instance=pi)
-
-    return render(request, 'core/contact.html', {'form':fm})
+#def contact(request, id):
+#    if request.method == 'POST':
+#        pi = User.objects.get(pk=id)
+#        fm = Form(request.POST, instance=pi)
+#        if fm.is_valid():
+#            fm.save()
+#    else:
+#        pi = User.objects.get(pk=id)
+#        fm = Form(instance=pi)
+#
+#    return render(request, 'core/contact.html', {'form':fm})
+#
