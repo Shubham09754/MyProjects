@@ -2,64 +2,96 @@
 
 {% block content %}
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Contact</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            background-color: #f4f4f4;
         }
 
-        .contact-container {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            width: 300px;
-        }
-
-        h2 {
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
             text-align: center;
-            color: #333;
         }
 
-        .contact-info {
-            margin-top: 20px;
+        section {
+            max-width: 600px;
+            margin: 2em auto;
+            padding: 1em;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        .contact-info p {
-            margin-bottom: 10px;
+        label {
+            display: block;
+            margin-bottom: 0.5em;
         }
 
-        .contact-info a {
-            text-decoration: none;
-            color: #007bff;
+        input,
+        textarea {
+            width: 100%;
+            padding: 0.5em;
+            margin-bottom: 1em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 0.7em 1em;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <div class="contact-container">
+
+    <header>
+        <h1>Shubham Kumar</h1>
+        <p>Python/Django Developer</p>
+    </header>
+
+    <section>
         <h2>Contact Me</h2>
-        <div class="contact-info">
-            <p><strong>Email:</strong> <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-            <p><strong>Phone:</strong> +1 (123) 456-7890</p>
-            <p><strong>GitHub:</strong> <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
-            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/yourname" target="_blank">linkedin.com/in/yourname</a></p>
-        </div>
-        <p>Feel free to reach out to me via email or connect with me on GitHub and LinkedIn!</p>
-    </div>
+        <form id="contactForm" action="#" method="post">
+            {% csrf_token %}
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
 
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
 
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
 
+            <button type="submit">Send Message</button>
+        </form>
 
+        <h2>Connect with Me</h2>
+        <p>Feel free to connect with me on LinkedIn and GitHub:</p>
+        
+        <ul>
+            <li><a href="https://www.linkedin.com/in/your-linkedin-username/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://github.com/your-github-username" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        </ul>
+    </section>
 
-<div class="text-center">
-    <a href="#" target="_blank"><i class="fab-fa-linkedin i-color mr-3" ></i></a>
-    <a href="#" target="_blank"><i class="fab-fa-Github-f i-color mr-3" ></i></a>
+    <footer>
+        <p>&copy; 2023 Your Name. All Rights Reserved.</p>
+    </footer>
 
-</div>
+</body>
+</html>
+
 {% endblock content %}
