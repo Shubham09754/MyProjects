@@ -3,95 +3,57 @@
 {% block content %}
 
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Contact</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
 
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 1em;
-            text-align: center;
-        }
+  <header class="bg-dark text-light py-4">
+    <div class="container">
+      <h1 class="display-4">Contact Me</h1>
+      <p class="lead">Feel free to reach out using any of the methods below.</p>
+    </div>
+  </header>
 
-        section {
-            max-width: 600px;
-            margin: 2em auto;
-            padding: 1em;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        label {
-            display: block;
-            margin-bottom: 0.5em;
-        }
-
-        input,
-        textarea {
-            width: 100%;
-            padding: 0.5em;
-            margin-bottom: 1em;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        button {
-            background-color: #333;
-            color: #fff;
-            padding: 0.7em 1em;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>Shubham Kumar</h1>
-        <p>Python/Django Developer</p>
-    </header>
-
-    <section>
-        <h2>Contact Me</h2>
-        <form id="contactForm" action="#" method="post">
-            {% csrf_token %}
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Your Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-
-            <button type="submit">Send Message</button>
-        </form>
-
-        <h2>Connect with Me</h2>
-        <p>Feel free to connect with me on LinkedIn and GitHub:</p>
+  <main class="container my-5">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card mb-3 py-5">
+          <div class="card-body">
+            <h5 class="card-title">Email</h5>
+            <p class="card-text"><a href="mailto:youremail@example.com">shubhamkumarsingh.xyz@gmail.com</a></p>
+          </div>
+        </div>
         
-        <ul>
-            <li><a href="https://www.linkedin.com/in/your-linkedin-username/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            <li><a href="https://github.com/your-github-username" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-        </ul>
-    </section>
+        <div class="card mb-3 py-5">
+          <div class="card-body">
+            <h5 class="card-title">Phone</h5>
+            <p class="card-text">+916204274301</p>
+          </div>
+        </div>
+      </div>
 
-    <footer>
-        <p>&copy; 2023 Your Name. All Rights Reserved.</p>
-    </footer>
+      <div class="col-md-6 ">
+        <div class="card mb-3 py-5">
+          <div class="card-body">
+            <h5 class="card-title">GitHub</h5>
+            <p class="card-text"><a href="https://github.com/Shubham09754/" target="_blank">github.com/shubham</a></p>
+          </div>
+        </div>
+        
+        <div class="card mb-3 py-5">
+          <div class="card-body">
+            <h5 class="card-title">LinkedIn</h5>
+            <p class="card-text"><a href="https://www.linkedin.com/in/shubham-kumar-4706991b1" target="_blank">linkedin.com/in/shubham</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 
-</body>
-</html>
+  <footer class="bg-dark text-light py-5">
+    <div class="container text-center">
+      <p>&copy; 2024 Shubham</p>
+    </div>
+  </footer>
+
+ 
+
 
 {% endblock content %}

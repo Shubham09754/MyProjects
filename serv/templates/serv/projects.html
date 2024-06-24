@@ -1,0 +1,70 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+
+<header class="bg-dark text-light py-4">
+    <div class="container">
+      <h1 class="display-4">Portfolio Projects</h1>
+      <p class="lead">Check out my latest projects below.</p>
+    </div>
+  </header>
+
+ 
+  <main class="container my-5">
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+      <!-- Project 1 -->
+      <div class="col py-5">
+        <div class="card h-100">
+          <img src="project1.jpg" class="card-img-top" alt="Project 1">
+          <div class="card-body">
+            <h5 class="card-title">My Portfolio</h5>
+            <p class="card-text">Web app made to showcase my skills and Achievements
+                Made using HTML, CSS, Django,Easy to use and Navigate.</p>
+            <a href="https://github.com/Shubham09754/MyProjects"target = "blank" class="btn btn-primary">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="col py-5">
+        <div class="card h-100">
+          <img src="project2.jpg" class="card-img-top" alt="Project 2">
+          <div class="card-body">
+            <h5 class="card-title">CRUD Application</h5>
+            <p class="card-text">A Web App allows users to Create, Update, Delete Records. This app uses SQLite to store and retrieve data.</p>
+            <a href="https://github.com/Shubham09754/Crudapp"target = "blank" class="btn btn-primary">View Project</a>
+          </div>
+        </div>
+      </div>
+<!-- Project 3 -->
+      <div class="col py-5">
+        <div class="card h-100">
+          <img src="project1.jpg" class="card-img-top" alt="Project 3">
+          <div class="card-body">
+            <h5 class="card-title">A Blog Application</h5>
+            <p class="card-text">blogging platform using Django is a web application built with the Django framework that allows users to create, publish, and manage blog posts on a website, providing a user-friendly content management system for bloggers.</p>
+            <a href="https://github.com/Shubham09754/Blog_app"target = "blank" class="btn btn-primary">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="col py-5">
+        <div class="card h-100">
+          <img src="project2.jpg" class="card-img-top" alt="Project 4">
+          <div class="card-body">
+            <h5 class="card-title">To_Do App</h5>
+            <p class="card-text">This is a beginner level application built using React and Django REST API.
+                It is an application specially built to keep track of errands or tasks that need to be done. This application will be like a task keeper where the user would be able to enter the tasks that they need to do. Once they are done with their tasks they can also remove them from the list</p>
+            <a href="https://github.com/Shubham09754/To-Do-app" target = "blank" class="btn btn-primary">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more projects as needed -->
+
+    </div>
+  </main>
+
+  
+{% endblock content %}

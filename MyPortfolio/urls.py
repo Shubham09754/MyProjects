@@ -17,10 +17,12 @@ from django.contrib import admin
 from django.urls import path
 from core import views as cv
 from edu import views as ev
+from serv import views as fv
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',cv.home, name="home"),
     path('contact',cv.contact, name="contact"),
-    path('skill',ev.skill,name="skill")
+    path('skill',ev.skill,name="skill"),
+    path("projects",fv.projects, name="projects")
 ]
